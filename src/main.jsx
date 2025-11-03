@@ -13,7 +13,7 @@ import UserDetails from "./Pages/UserDetails.jsx";
 const router = createBrowserRouter([
  
 {
-  path: "/react-UserList-App",
+  path: "/",
   element: <App/>,
    children: [
       { path: "/Home", element: <HomePage /> },
@@ -23,7 +23,10 @@ const router = createBrowserRouter([
     ],
   },
    
-]);
+],{
+   basename: "/react-UserList-App",
+}
+);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
      <RouterProvider router={router} />
